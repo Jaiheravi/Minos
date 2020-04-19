@@ -2,7 +2,8 @@
 
 > atGrid is a Flexbox-based CSS Grid System that uses attributes instead of classes.
 
-## Examples
+
+## Examples
 
 ### Columns with the same width
 
