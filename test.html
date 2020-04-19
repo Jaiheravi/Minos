@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>atGrid.css Test File</title>
+    <meta name="description" content="Test file for atGrid.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="atgrid.css">
+
+    <!-- Test only -->
+    <style>
+      h1 { text-align: center; }
+      h2 {
+        margin-top: 1em;
+        display: inline-block;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      [container] {
+        margin-top: 2em;
+      }
+
+      [container],
+      [column] {
+        outline: 1px solid #eee;
+        outline-offset: -1px;
+      }
+
+      [column] p {
+        background-color: #d6d6d6;
+        text-align: center;
+        color: #666;
+      }
+
+      [column] [column] {
+        background-color: #f5f5f5;
+      }
+
+      .demo--big {
+        height: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <h1>atGrid.css test file</h1>
+
+    <!-- Normal columns -->
+    <section container>
+      <h2>Normal columns</h2>
+
+      <div grid>
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="8">
+          <p>8</p>
+        </section>
+
+        <section column="4">
+          <p>4LoremipsumdolorsitametconsecteturadipiscingelitIntegereuismodsuscipitodioegetcongue</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="10">
+          <p>10</p>
+        </section>
+
+        <section column="2">
+          <p>2</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- Columns without gutter -->
+    <section container>
+      <h2>Without gutter</h2>
+
+      <div grid="no-gutter">
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column>
+          <p>Auto</p>
+        </section>
+
+        <section column>
+          <p>Auto</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="8">
+          <p>8</p>
+        </section>
+
+        <section column="4">
+          <p>4</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="10">
+          <p>10</p>
+        </section>
+
+        <section column="2">
+          <p>2</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- No collapse columns -->
+    <section container>
+      <h2>No collapse columns</h2>
+
+      <div grid="no-collapse">
+        <section column>
+          <p>4</p>
+        </section>
+
+        <section column>
+          <p>4</p>
+        </section>
+
+        <section column>
+          <p>4</p>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Offset columns</h2>
+
+      <div grid>
+        <section column="1">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +1">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +2">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +3">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +4">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +5">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +6">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +7">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +8">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +9">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +10">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1 +11">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="4">
+          <p>4</p>
+        </section>
+
+        <section column="4 +4">
+          <p>4 +4</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="3">
+          <p>3</p>
+        </section>
+
+        <section column="3 +6">
+          <p>3 +6</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="2">
+          <p>2</p>
+        </section>
+
+        <section column="2 +8">
+          <p>2 +8</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="1">
+          <p>1</p>
+        </section>
+
+        <section column="1 +10">
+          <p>1 +10</p>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Offset columns without gutter</h2>
+
+      <div grid="no-gutter">
+        <section column="1">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +1">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +2">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +3">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +4">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +5">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +6">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +7">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +8">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +9">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +10">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1 +11">
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="5">
+          <p>5</p>
+        </section>
+
+        <section column="5 +2">
+          <p>5 +2</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="4">
+          <p>4</p>
+        </section>
+
+        <section column="4 +4">
+          <p>4 +4</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="3">
+          <p>3</p>
+        </section>
+
+        <section column="3 +6">
+          <p>3 +6</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="2">
+          <p>2</p>
+        </section>
+
+        <section column="2 +8">
+          <p>2 +8</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="1">
+          <p>1</p>
+        </section>
+
+        <section column="1 +10">
+          <p>1 +10</p>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Nested grid</h2>
+
+      <div grid>
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="4">
+          <p>4</p>
+        </section>
+
+        <section column="8">
+          <div grid>
+            <section column="6">
+              <p>6 > 8</p>
+            </section>
+
+            <section column="6">
+              <p>6 > 8</p>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <div grid>
+        <section column="4">
+          <p>4</p>
+        </section>
+
+        <section column="8">
+          <div grid>
+            <section column="3">
+              <p>3 > 8</p>
+            </section>
+
+            <section column="9">
+              <p>9 > 8</p>
+            </section>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Nested grid without gutters</h2>
+
+      <div grid="no-gutter">
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+
+        <section column>
+          <p>1</p>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="4">
+          <p>4</p>
+        </section>
+
+        <section column="8">
+          <div grid="no-gutter">
+            <section column="6">
+              <p>6 > 8</p>
+            </section>
+
+            <section column="6">
+              <p>6 > 8</p>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <div grid="no-gutter">
+        <section column="4">
+          <p>4</p>
+        </section>
+
+        <section column="8">
+          <div grid="no-gutter">
+            <section column="3">
+              <p>3 > 8</p>
+            </section>
+
+            <section column="9">
+              <p>9 > 8</p>
+            </section>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Top grid alignment</h2>
+
+      <div class="demo--big" grid="top">
+        <section column>
+          <p>Top</p>
+        </section>
+
+        <section column>
+          <p>Top</p>
+        </section>
+
+        <section column>
+          <p>Top</p>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Center grid alignment</h2>
+
+      <div class="demo--big" grid="center">
+        <section column>
+          <p>Center</p>
+        </section>
+
+        <section column>
+          <p>Center</p>
+        </section>
+
+        <section column>
+          <p>Center</p>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Bottom grid alignment</h2>
+
+      <div class="demo--big" grid="bottom">
+        <section column>
+          <p>Bottom</p>
+        </section>
+
+        <section column>
+          <p>Bottom</p>
+        </section>
+
+        <section column>
+          <p>Bottom</p>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Column alignment</h2>
+
+      <div class="demo--big" grid>
+        <section column="top">
+          <p>Top</p>
+        </section>
+
+        <section column="center">
+          <p>Center</p>
+        </section>
+
+        <section column="bottom">
+          <p>Bottom</p>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Column order</h2>
+
+      <div grid>
+        <section column="#2">
+          <p>First col #2</p>
+        </section>
+
+        <section column="#3">
+          <p>Second col #3</p>
+        </section>
+
+        <section column="#1">
+          <p>Third col #1</p>
+        </section>
+      </div>
+    </section>
+
+    <section container="solid">
+      <h2>Solid container</h2>
+
+      <div grid>
+        <section column>
+          <p>4</p>
+        </section>
+
+        <section column>
+          <p>4</p>
+        </section>
+
+        <section column>
+          <p>4</p>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>

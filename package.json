@@ -1,0 +1,35 @@
+{
+  "name": "atgrid.css",
+  "version": "5.0.0",
+  "description": "CSS Grid System with attribute selectors",
+  "author": "Jaime Hernández <contact@jaime.one>",
+  "license": "MIT",
+  "homepage": "https://github.com/Jaiheravi/atgrid.css",
+  "bugs": {
+    "url": "https://github.com/Jaiheravi/atgrid.css/issues"
+  },
+  "main": "atgrid.ccss",
+  "devDependencies": {
+    "cssnano-cli": "^1.0.5",
+    "@concisecss/cli": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jaiheravi/atgrid.css.git"
+  },
+  "keywords": [
+    "simple",
+    "responsive",
+    "nestable",
+    "attribute-based",
+    "attributes",
+    "grid",
+    "html",
+    "css",
+    "flexbox"
+  ],
+  "scripts": {
+    "build": "concise compile atgrid.pcss atgrid.css",
+    "minify": "cssnano atgrid.css atgrid.min.css"
+  }
+}
