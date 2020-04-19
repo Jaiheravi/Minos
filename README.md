@@ -1,8 +1,8 @@
-# atGrid.css - CSS Grid System with attribute selectors
+# Minos - The Intuitive CSS Grid System
 
-> atGrid is a Flexbox-based CSS Grid System that uses attributes instead of classes.
+Minos is a Flexbox-based CSS Grid System that uses non-standard HTML elements.
 
-
+<!--
 ## Examples
 
 ### Columns with the same width
@@ -203,7 +203,4 @@ Aligns the column vertically to the bottom of the grid.
 **Default:** 420px <br>
 **Description:** Below this point the columns are expanded to 100%.
 
-
-## License
-
-The MIT License - James Kolce
+-->

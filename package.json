@@ -1,21 +1,21 @@
 {
-  "name": "atgrid.css",
-  "version": "5.0.0",
-  "description": "CSS Grid System with attribute selectors",
+  "name": "@jaiheravi/minos",
+  "version": "1.0.0",
+  "description": "The Intuitive CSS Grid System",
   "author": "Jaime Hernández <contact@jaime.one>",
   "license": "MIT",
-  "homepage": "https://github.com/Jaiheravi/atgrid.css",
+  "homepage": "https://github.com/Jaiheravi/Minos",
   "bugs": {
-    "url": "https://github.com/Jaiheravi/atgrid.css/issues"
+    "url": "https://github.com/Jaiheravi/Minos/issues"
   },
-  "main": "atgrid.ccss",
   "devDependencies": {
-    "cssnano-cli": "^1.0.5",
-    "@concisecss/cli": "^0.1.0"
+    "concise.css": "github:ConciseCSS/concise.css#dev",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jaiheravi/atgrid.css.git"
+    "url": "https://github.com/Jaiheravi/Minos.git"
   },
   "keywords": [
     "simple",
@@ -29,7 +29,9 @@
     "flexbox"
   ],
   "scripts": {
-    "build": "concise compile atgrid.pcss atgrid.css",
-    "minify": "cssnano atgrid.css atgrid.min.css"
-  }
+    "compile": "concise compile minos.pcss minos.css",
+    "minify": "postcss minos.css --use cssnano --output minus.min.css --no-map",
+    "build": "npm run compile && npm run minify"
+  },
+  "dependencies": {}
 }

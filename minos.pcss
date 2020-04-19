@@ -1,0 +1,254 @@
+* { box-sizing: border-box; }
+
+// --------------------------------------------------
+// Media Queries
+
+@custom-media --small (width >= 480px);
+@custom-media --medium (width >= 768px);
+@custom-media --large (width >= 960px);
+
+// --------------------------------------------------
+// Base styles
+
+container {
+  // Max width for container
+  --grid-container-width: 1200px;
+  // Gutter size
+  --grid-gutter: 2rem;
+
+  --width-1: calc(1 / 12 * 100%);
+  --width-2: calc(2 / 12 * 100%);
+  --width-3: calc(3 / 12 * 100%);
+  --width-4: calc(4 / 12 * 100%);
+  --width-5: calc(5 / 12 * 100%);
+  --width-6: calc(6 / 12 * 100%);
+  --width-7: calc(7 / 12 * 100%);
+  --width-8: calc(8 / 12 * 100%);
+  --width-9: calc(9 / 12 * 100%);
+  --width-10: calc(10 / 12 * 100%);
+  --width-11: calc(11 / 12 * 100%);
+  --width-12: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--grid-container-width);
+  padding-left: calc(var(--grid-gutter) / 2);
+  padding-right: calc(var(--grid-gutter) / 2);
+}
+
+grid {
+  display: flex;
+  margin-left: calc(var(--grid-gutter) / -2);
+  margin-right: calc(var(--grid-gutter) / -2);
+  flex-direction: column;
+}
+
+column {
+  flex: 1 1 auto;
+  padding-left: calc(var(--grid-gutter) / 2);
+  padding-right: calc(var(--grid-gutter) / 2);
+}
+
+// Have columns when colums are used
+// otherwise we will have rows
+column[width],
+column[s],
+column[m],
+column[l] {
+  grid { flex-direction: row; }
+}
+
+// --------------------------------------------------
+// Utility Classes
+
+// No Gutters
+grid [no-gutter] {
+  margin-left: 0;
+  margin-right: 0;
+
+  & > [column] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// No Collapse columns
+grid [no-collapse] { flex-flow: row nowrap; }
+
+// Column wrapping
+grid [wrap] { flex-wrap: wrap; }
+grid [wrap="none"] { flex-wrap: nowrap; }
+grid [wrap="reverse"] { flex-wrap: wrap-reverse; }
+
+// Direction of columns in a row
+grid [direction="vertical"] { flex-direction: row; }
+grid [direction="vertical-reverse"] { flex-direction: row-reverse; }
+grid [direction="horizontal"] { flex-direction: column; }
+grid [direction="horizontal-reverse"] { flex-direction: column-reverse; }
+
+// Justify content
+grid [justify="start"] { justify-content: flex-start; }
+grid [justify="end"] { justify-content: flex-end; }
+grid [justify="center"] { justify-content: center; }
+grid [justify="between"] { justify-content: space-between; }
+grid [justify="around"] { justify-content: space-around; }
+
+// Alignment of internal items
+grid [align="top"] { align-items: flex-start; }
+grid [align="center"] { align-items: center; }
+grid [align="bottom"] { align-items: flex-end; }
+
+// Alignment of individual columns
+column [align="top"] { align-self: flex-start; }
+column [align="center"] { align-self: center; }
+column [align="bottom"] { align-self: flex-end; }
+
+// Reorder columns
+column[order="1"] { order: 1; }
+column[order="2"] { order: 2; }
+column[order="3"] { order: 3; }
+column[order="4"] { order: 4; }
+column[order="5"] { order: 5; }
+column[order="6"] { order: 6; }
+column[order="7"] { order: 7; }
+column[order="8"] { order: 8; }
+column[order="9"] { order: 9; }
+column[order="10"] { order: 10; }
+column[order="11"] { order: 11; }
+column[order="12"] { order: 12; }
+
+// --------------------------------------------------
+// All sizes by default
+
+// Columns
+column[default] { flex-grow: 0; flex-shrink: 1; }
+column[default~="1"] { flex-basis: var(--width-1); max-width: var(--width-1); }
+column[default~="2"] { flex-basis: var(--width-2); max-width: var(--width-2); }
+column[default~="3"] { flex-basis: var(--width-3); max-width: var(--width-3); }
+column[default~="4"] { flex-basis: var(--width-4); max-width: var(--width-4); }
+column[default~="5"] { flex-basis: var(--width-5); max-width: var(--width-5); }
+column[default~="6"] { flex-basis: var(--width-6); max-width: var(--width-6); }
+column[default~="7"] { flex-basis: var(--width-7); max-width: var(--width-7); }
+column[default~="8"] { flex-basis: var(--width-8); max-width: var(--width-8); }
+column[default~="9"] { flex-basis: var(--width-9); max-width: var(--width-9); }
+column[default~="10"] { flex-basis: var(--width-10); max-width: var(--width-10); }
+column[default~="11"] { flex-basis: var(--width-11); max-width: var(--width-11); }
+column[default~="12"] { flex-basis: var(--width-12); max-width: var(--width-12); }
+
+// Column offsets
+column[default~="+1"] { margin-left: var(--width-1); }
+column[default~="+2"] { margin-left: var(--width-2); }
+column[default~="+3"] { margin-left: var(--width-3); }
+column[default~="+4"] { margin-left: var(--width-4); }
+column[default~="+5"] { margin-left: var(--width-5); }
+column[default~="+6"] { margin-left: var(--width-6); }
+column[default~="+7"] { margin-left: var(--width-7); }
+column[default~="+8"] { margin-left: var(--width-8); }
+column[default~="+9"] { margin-left: var(--width-9); }
+column[default~="+10"] { margin-left: var(--width-10); }
+column[default~="+11"] { margin-left: var(--width-11); }
+
+// --------------------------------------------------
+// > Small
+
+@media (--small) {
+  // Resize container to current breakpoint
+  container[solid] { max-width: 480px; }
+
+  // Columns
+  column[s~="1"] { flex-basis: var(--width-1); max-width: var(--width-1); }
+  column[s~="2"] { flex-basis: var(--width-2); max-width: var(--width-2); }
+  column[s~="3"] { flex-basis: var(--width-3); max-width: var(--width-3); }
+  column[s~="4"] { flex-basis: var(--width-4); max-width: var(--width-4); }
+  column[s~="5"] { flex-basis: var(--width-5); max-width: var(--width-5); }
+  column[s~="6"] { flex-basis: var(--width-6); max-width: var(--width-6); }
+  column[s~="7"] { flex-basis: var(--width-7); max-width: var(--width-7); }
+  column[s~="8"] { flex-basis: var(--width-8); max-width: var(--width-8); }
+  column[s~="9"] { flex-basis: var(--width-9); max-width: var(--width-9); }
+  column[s~="10"] { flex-basis: var(--width-10); max-width: var(--width-10); }
+  column[s~="11"] { flex-basis: var(--width-11); max-width: var(--width-11); }
+  column[s~="12"] { flex-basis: var(--width-12); max-width: var(--width-12); }
+
+  // Column offsets
+  column[s~="+1"] { margin-left: var(--width-1); }
+  column[s~="+2"] { margin-left: var(--width-2); }
+  column[s~="+3"] { margin-left: var(--width-3); }
+  column[s~="+4"] { margin-left: var(--width-4); }
+  column[s~="+5"] { margin-left: var(--width-5); }
+  column[s~="+6"] { margin-left: var(--width-6); }
+  column[s~="+7"] { margin-left: var(--width-7); }
+  column[s~="+8"] { margin-left: var(--width-8); }
+  column[s~="+9"] { margin-left: var(--width-9); }
+  column[s~="+10"] { margin-left: var(--width-10); }
+  column[s~="+11"] { margin-left: var(--width-11); }
+}
+
+// --------------------------------------------------
+// > medium
+
+@media (--medium) {
+  // Resize container to current breakpoint
+  container[solid] { max-width: 768px; }
+
+  // Columns
+  column[m~="1"] { flex-basis: var(--width-1); max-width: var(--width-1); }
+  column[m~="2"] { flex-basis: var(--width-2); max-width: var(--width-2); }
+  column[m~="3"] { flex-basis: var(--width-3); max-width: var(--width-3); }
+  column[m~="4"] { flex-basis: var(--width-4); max-width: var(--width-4); }
+  column[m~="5"] { flex-basis: var(--width-5); max-width: var(--width-5); }
+  column[m~="6"] { flex-basis: var(--width-6); max-width: var(--width-6); }
+  column[m~="7"] { flex-basis: var(--width-7); max-width: var(--width-7); }
+  column[m~="8"] { flex-basis: var(--width-8); max-width: var(--width-8); }
+  column[m~="9"] { flex-basis: var(--width-9); max-width: var(--width-9); }
+  column[m~="10"] { flex-basis: var(--width-10); max-width: var(--width-10); }
+  column[m~="11"] { flex-basis: var(--width-11); max-width: var(--width-11); }
+  column[m~="12"] { flex-basis: var(--width-12); max-width: var(--width-12); }
+
+  // Column offsets
+  column[m~="+1"] { margin-left: var(--width-1); }
+  column[m~="+2"] { margin-left: var(--width-2); }
+  column[m~="+3"] { margin-left: var(--width-3); }
+  column[m~="+4"] { margin-left: var(--width-4); }
+  column[m~="+5"] { margin-left: var(--width-5); }
+  column[m~="+6"] { margin-left: var(--width-6); }
+  column[m~="+7"] { margin-left: var(--width-7); }
+  column[m~="+8"] { margin-left: var(--width-8); }
+  column[m~="+9"] { margin-left: var(--width-9); }
+  column[m~="+10"] { margin-left: var(--width-10); }
+  column[m~="+11"] { margin-left: var(--width-11); }
+}
+
+// --------------------------------------------------
+// > large
+
+@media (--large) {
+  // Resize container to default (because this is the bigger breakpoint)
+  container[solid] { max-width: var(--grid-container-width); }
+
+  // Columns
+  column[l~="1"] { flex-basis: var(--width-1); max-width: var(--width-1); }
+  column[l~="2"] { flex-basis: var(--width-2); max-width: var(--width-2); }
+  column[l~="3"] { flex-basis: var(--width-3); max-width: var(--width-3); }
+  column[l~="4"] { flex-basis: var(--width-4); max-width: var(--width-4); }
+  column[l~="5"] { flex-basis: var(--width-5); max-width: var(--width-5); }
+  column[l~="6"] { flex-basis: var(--width-6); max-width: var(--width-6); }
+  column[l~="7"] { flex-basis: var(--width-7); max-width: var(--width-7); }
+  column[l~="8"] { flex-basis: var(--width-8); max-width: var(--width-8); }
+  column[l~="9"] { flex-basis: var(--width-9); max-width: var(--width-9); }
+  column[l~="10"] { flex-basis: var(--width-10); max-width: var(--width-10); }
+  column[l~="11"] { flex-basis: var(--width-11); max-width: var(--width-11); }
+  column[l~="12"] { flex-basis: var(--width-12); max-width: var(--width-12); }
+
+  // Column offsets
+  column[l~="+1"] { margin-left: var(--width-1); }
+  column[l~="+2"] { margin-left: var(--width-2); }
+  column[l~="+3"] { margin-left: var(--width-3); }
+  column[l~="+4"] { margin-left: var(--width-4); }
+  column[l~="+5"] { margin-left: var(--width-5); }
+  column[l~="+6"] { margin-left: var(--width-6); }
+  column[l~="+7"] { margin-left: var(--width-7); }
+  column[l~="+8"] { margin-left: var(--width-8); }
+  column[l~="+9"] { margin-left: var(--width-9); }
+  column[l~="+10"] { margin-left: var(--width-10); }
+  column[l~="+11"] { margin-left: var(--width-11); }
+}
