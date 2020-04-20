@@ -9,6 +9,7 @@
     "url": "https://github.com/Jaiheravi/Minos/issues"
   },
   "devDependencies": {
+    "chokidar-cli": "^2.1.0",
     "concise.css": "github:ConciseCSS/concise.css#dev",
     "cssnano": "^4.1.10",
     "postcss-cli": "^7.1.0"
@@ -30,7 +31,8 @@
   ],
   "scripts": {
     "compile": "concise compile minos.pcss minos.css",
-    "minify": "postcss minos.css --use cssnano --output minus.min.css --no-map",
+    "compile:watch": "chokidar '*.pcss' -c 'npm run compile'",
+    "minify": "postcss minos.css --use cssnano --output minos.min.css --no-map",
     "build": "npm run compile && npm run minify"
   },
   "dependencies": {}
