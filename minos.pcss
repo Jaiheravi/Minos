@@ -41,28 +41,22 @@ grid {
   display: flex;
   margin-left: calc(var(--grid-gutter) / -2);
   margin-right: calc(var(--grid-gutter) / -2);
+  flex-wrap: wrap
 }
 
 column {
   flex: 1 1 auto;
+  flex-basis: var(--width-12);
+  max-width: var(--width-12);
   padding-left: calc(var(--grid-gutter) / 2);
   padding-right: calc(var(--grid-gutter) / 2);
-}
-
-// Have columns when colums are used
-// otherwise we will have rows
-column[default],
-column[s],
-column[m],
-column[l] {
-  flex-direction: row;
 }
 
 // --------------------------------------------------
 // Utility Classes
 
 // No Gutters
-grid[no-gutter] {
+grid[gutter="none"] {
   margin-left: 0;
   margin-right: 0;
 
@@ -71,14 +65,6 @@ grid[no-gutter] {
     padding-right: 0;
   }
 }
-
-// No Collapse columns
-grid[no-collapse] { flex-flow: row nowrap; }
-
-// Column wrapping
-grid[wrap] { flex-wrap: wrap; }
-grid[wrap="none"] { flex-wrap: nowrap; }
-grid[wrap="reverse"] { flex-wrap: wrap-reverse; }
 
 // Direction of columns in a row
 grid[direction="vertical"] { flex-direction: row; }
@@ -121,7 +107,6 @@ column[order="12"] { order: 12; }
 // All sizes by default
 
 // Columns
-column[default] { flex-grow: 0; flex-shrink: 1; }
 column[default~="1"] { flex-basis: var(--width-1); max-width: var(--width-1); }
 column[default~="2"] { flex-basis: var(--width-2); max-width: var(--width-2); }
 column[default~="3"] { flex-basis: var(--width-3); max-width: var(--width-3); }
@@ -133,7 +118,6 @@ column[default~="8"] { flex-basis: var(--width-8); max-width: var(--width-8); }
 column[default~="9"] { flex-basis: var(--width-9); max-width: var(--width-9); }
 column[default~="10"] { flex-basis: var(--width-10); max-width: var(--width-10); }
 column[default~="11"] { flex-basis: var(--width-11); max-width: var(--width-11); }
-column[default~="12"] { flex-basis: var(--width-12); max-width: var(--width-12); }
 
 // Column offsets
 column[default~="+1"] { margin-left: var(--width-1); }
