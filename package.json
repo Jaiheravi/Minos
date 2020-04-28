@@ -1,5 +1,6 @@
 {
   "name": "@jaiheravi/minos",
+  "main": "minos.css",
   "version": "1.0.0",
   "description": "The Intuitive CSS Grid System",
   "author": "Jaime Hernández <contact@jaime.one>",
