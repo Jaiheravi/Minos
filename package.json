@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The Intuitive CSS Grid System",
   "author": "Jaime Hernández <contact@jaime.one>",
-  "license": "MIT",
+  "license": "BSD-4-Clause",
   "homepage": "https://github.com/Jaiheravi/Minos",
   "bugs": {
     "url": "https://github.com/Jaiheravi/Minos/issues"
