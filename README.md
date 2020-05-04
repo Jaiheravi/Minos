@@ -1,140 +1,30 @@
 # Minos - The Intuitive CSS Grid System
 
-Minos is a Flexbox-based CSS Grid System that uses non-standard HTML elements.
+Minos is a flexbox-based CSS grid system that uses attribute selectors as the main medium for layout definition.
 
-<!--
-## Examples
-
-### Columns with the same width
-
-```HTML
-<div grid>
-  <section column>
-    <p>Auto</p>
-  </section>
-
-  <section column>
-    <p>Auto</p>
-  </section>
-</div>
-```
-
-### Columns with a determined width
-
-```HTML
-<div grid>
-  <section column="8">
-    <p>8</p>
-  </section>
-
-  <section column="4">
-    <p>4</p>
-  </section>
-</div>
-```
-
-### Columns without gutters
-
-```HTML
-<div grid="ng">
-  <section column="8">
-    <p>8</p>
-  </section>
-
-  <section column="4">
-    <p>4</p>
-  </section>
-</div>
-```
-
-### Columns with offsets
-
-```HTML
-<div grid>
-  <section column="3">
-    <p>3</p>
-  </section>
-
-  <section column="3 +6">
-    <p>3 +6</p>
-  </section>
-</div>
-```
-
-### Columns with offsets and without gutters
-
-```HTML
-<div grid="ng">
-  <section column="5">
-    <p>5</p>
-  </section>
-
-  <section column="5 +2">
-    <p>5 +2</p>
-  </section>
-</div>
-```
-
-### Nested grids
-
-```HTML
-<div grid>
-  <section column="4">
-    <p>4</p>
-  </section>
-
-  <section column="8">
-    <div grid>
-      <section column="6">
-        <p>6 > 8</p>
-      </section>
-
-      <section column="6">
-        <p>6 > 8</p>
-      </section>
-    </div>
-  </section>
-</div>
-```
-
-### Nested grids without gutters
-
-```HTML
-<div grid="ng">
-  <section column="4">
-    <p>4</p>
-  </section>
-
-  <section column="8">
-    <div grid="ng">
-      <section column="6">
-        <p>6 > 8</p>
-      </section>
-
-      <section column="6">
-        <p>6 > 8</p>
-      </section>
-    </div>
-  </section>
-</div>
-```
-
+A layout is composed by three elements: container, grid, column. The container element defines a section with a maximum width in pixels according to the `--grid-container-width` property. Columns must be placed within grid elements.
 
 ## Installation
 
 ```
-$ npm install atgrid.css
+$ npm install Jaiheravi/Minos#master
 ```
 
-## Browser Compatibility
+## Use
 
-Since version 4.0.0, atGrid.css is based on Flexbox, you can see the table of compatibility in the [Can I Use](http://caniuse.com/#feat=flexbox) site.
-
+```HTML
+<div container>
+  <div grid>
+    <div column='x'>A simple column with x width</div>
+    <div column='x +y'>A simple column with x width and y offset</div>
+  </div>
+</div>
+```
 
 ## HTML Attributes
 
 `container`
-Sets the element as a container, the container element will have a fixed max-width and will be centered on the page.
+Sets the element as a container, the container element will have a max-width and will be centered on the page.
 
 `grid`
 Sets the element as a grid element. This is a required element, and should be direct parent of the column elements.
@@ -146,12 +36,13 @@ Sets the element as a column, should always be used inside a grid element. A col
 
 ### Container
 
-The container element doesn't accept any values.
+`solid`
+The width of the container will be static across each breakpoint.
 
 ### Grid
 
-`ng`
-Will create a grid where the columns doesn't have gutters.
+`no-gutter`
+Will create a grid where the columns don't have gutters.
 
 `top`
 Aligns all the columns inside vertically to the top of the grid.
@@ -181,29 +72,131 @@ Aligns the column vertically to the center of the grid.
 Aligns the column vertically to the bottom of the grid.
 
 
-## Sass configuration
+## Custom Properties
 
-`container-width` <br>
+`--grid-container-width` <br>
 **Default:** 1200px <br>
 **Description**: Maximum width of the container element.
 
-`gutter` <br>
+`--grid-gutter` <br>
 **Default:** 2em <br>
 **Description:** Space between columns.
 
-`num-columns` <br>
-**Default:** 12 <br>
-**Description:** Number of columns.
+## Breakpoints
 
-`prefix` <br>
-**Default:** '' <br>
-**Description:** Prefix for the attributes, use `data-` if you need valid HTML.
+`--small` <br>
+**Value:** width >= 480px <br>
+**Description**: Maximum width of the container element.
 
-`breakpoint` <br>
-**Default:** 420px <br>
-**Description:** Below this point the columns are expanded to 100%.
+`--medium` <br>
+**Value:** width >= 768px <br>
+**Description:** Space between columns.
 
--->
+`--large` <br>
+**Value:** width >= 960px <br>
+**Description:** Space between columns.
+
+## Examples
+
+### Columns with a determined width
+
+```HTML
+<div grid>
+  <section column="8">
+    <p>8</p>
+  </section>
+
+  <section column="4">
+    <p>4</p>
+  </section>
+</div>
+```
+
+### Columns without gutters
+
+```HTML
+<div grid="no-gutter">
+  <section column="8">
+    <p>8</p>
+  </section>
+
+  <section column="4">
+    <p>4</p>
+  </section>
+</div>
+```
+
+### Columns with offsets
+
+```HTML
+<div grid>
+  <section column="3">
+    <p>3</p>
+  </section>
+
+  <section column="3 +6">
+    <p>3 +6</p>
+  </section>
+</div>
+```
+
+### Columns with offsets and without gutters
+
+```HTML
+<div grid="no-gutter">
+  <section column="5">
+    <p>5</p>
+  </section>
+
+  <section column="5 +2">
+    <p>5 +2</p>
+  </section>
+</div>
+```
+
+### Nested grids
+
+```HTML
+<div grid>
+  <section column="4">
+    <p>4</p>
+  </section>
+
+  <section column="8">
+    <div grid>
+      <section column="6">
+        <p>6 inside 8</p>
+      </section>
+
+      <section column="6">
+        <p>6 inside 8</p>
+      </section>
+    </div>
+  </section>
+</div>
+```
+
+### Nested grids without gutters
+
+```HTML
+<div grid="no-gutter">
+  <section column="4">
+    <p>4</p>
+  </section>
+
+  <section column="8">
+    <div grid="no-gutter">
+      <section column="6">
+        <p>6 > 8</p>
+      </section>
+
+      <section column="6">
+        <p>6 > 8</p>
+      </section>
+    </div>
+  </section>
+</div>
+```
 
 ## License
 
