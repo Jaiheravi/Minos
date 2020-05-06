@@ -1,8 +1,8 @@
-<p style="text-align: center;">
+<p align="center">
 <img src="https://raw.githubusercontent.com/Jaiheravi/Minos/master/logo.svg">
 </p>
 
-<h1 style="text-align: center;">Minos - The Intuitive CSS Grid System</h1>
+<h1 align="center">Minos - The Intuitive CSS Grid System</h1>
 
 Minos is a flexbox-based CSS grid system that uses attribute selectors as the main medium for layout definition.
 
