@@ -8,6 +8,8 @@ Minos is a flexbox-based CSS grid system that uses attribute selectors as the ma
 
 A layout is composed by three elements: container, grid, column. The container element defines a section with a maximum width in pixels according to the `--grid-container-width` property. Columns must be placed within grid elements.
 
+**SUPPORT**: Support is available only to sponsors. Make sure to become a Github Sponsor by clicking in the "Sponsor" button at the top of the page before opening an issue report. Tiers start at $10 a month.
+
 ## Installation
 
 ```
